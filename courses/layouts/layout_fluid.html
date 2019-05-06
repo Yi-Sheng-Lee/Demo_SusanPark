@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Test CSS</title>
+	<link rel="stylesheet" type="text/css" href="css/reset.css">
+	<style type="text/css">
+		header,main,footer{padding:2%;}
+		header{background-color:pink;overflow:hidden;}
+		header>div{background-color:red;height:100px;float:left;}
+		main{background-color:lightblue;clear:both;overflow:hidden;}
+		main>div{background-color:blue;float:left;height:350px;}
+		footer{background-color:lightgreen;clear:both;overflow:hidden;}
+		footer>div{background-color:green;height:200px;float:left;}
+
+		@media screen and (min-width:1281px){
+			body>div{width:90%;margin:0 auto;}
+			header>div{width:49%;}
+			header>div:not(:last-child){margin-right:2%;}
+			main>div{width:23.5%;}
+			main>div:not(:last-child){margin-right:2%;}
+			footer>div{width:32%;}
+			footer>div:not(:last-child){margin-right:2%;}
+
+
+		}
+
+		@media screen and (max-width:1280px){
+			header>div{width:49%;}
+			header>div:not(:last-child){margin-right:2%;}
+			main>div{width:49%;}
+			main>:nth-child(odd){margin-right:2%;margin-bottom:20px;}
+			footer>div{width:32%;}
+			footer>div:not(:last-child){margin-right:2%;}
+		}
+
+		@media screen and (max-width:800px){
+			header>div,main>div,footer>div{width:100%;}
+			header>div:not(:last-child),main>div:not(:last-child),footer>div:not(:last-child){margin-bottom:20px;}
+		}
+
+
+
+	</style>
+</head>
+<body>
+	<div>
+		<header>
+			<div><h2>Block 1</h2></div>
+			<div><h2>Block 2</h2></div>
+			
+		</header>
+		<main>
+			<div><h2>Block 3</h2></div>
+			<div><h2>Block 4</h2></div>
+			<div><h2>Block 5</h2></div>
+			<div><h2>Block 6</h2></div>
+		</main>
+		<footer>
+			<div><h2>Block 7</h2></div>
+			<div><h2>Block 8</h2></div>
+			<div><h2>Block 9</h2></div>
+		</footer>
+	</div>
+</body>
+</html>

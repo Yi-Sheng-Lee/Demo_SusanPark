@@ -1,0 +1,144 @@
+[Navigator]
+---------------------------------
+home
+about me
+	what people say
+albums
+	grid gallery
+	masonry gallery
+	fullwidth gallery
+pages
+	page 1
+		services
+		single sevice
+		masonry blog
+		blog post
+		make an appointment
+		faq
+	page 2
+		404 page
+		503 page
+		coming soon
+		maintenance
+		privacy policy
+	elements
+		buttons
+		forms
+		grid system
+		progress bars
+		tables
+		tabs & accordiions
+		typography
+	layouts
+		header minimal
+		header fullwidth
+		header sidebar
+		footer centered
+		footer minimal
+contact us
+
+
+[Slider]
+-----------------------------------------
+image #1
+	With the experience of more than 10 years, I am glad to offer you a wide variety of love story photography services at affordable prices.
+image #2
+	With the experience of more than 10 years, I am glad to offer you a wide variety of love story photography services at affordable prices.
+image #3
+	With the experience of more than 10 years, I am glad to offer you a wide variety of love story photography services at affordable prices.
+image #4
+	With the experience of more than 10 years, I am glad to offer you a wide variety of love story photography services at affordable prices.
+
+
+[About Me]
+-----------------------------------------
+about me
+
+I’ve been working as a professional wedding photographer all my adult life.
+
+My name is Susan Parker, and I have been a professional wedding photographer since 2005. On this website you can take a look at my latest photos or order a photo session for yourself or your family.
+
+read more
+
+
+[Rewards]
+-------------------------------------------
+#1
+Best photo of the year
+2010
+
+#2
+Best nature photo
+2014
+
+#3
+Best love story photo
+2015
+
+#4
+Photographer of the year
+2016
+
+
+[Portfolio]
+-----------------------------------------
+image #1
+	If you are looking for high quality wedding photography, I will be glad to help you.
+image #2
+	If you are looking for high quality wedding photography, I will be glad to help you.
+image #3
+	If you are looking for high quality wedding photography, I will be glad to help you.
+image #4
+	If you are looking for high quality wedding photography, I will be glad to help you.
+image #5
+	If you are looking for high quality wedding photography, I will be glad to help you.
+image #6
+	If you are looking for high quality wedding photography, I will be glad to help you.
+
+
+[Blog]
+----------------------------------------
+#1
+Jul 20, 2017  3 comments
+
+Becoming a King and Queen for a Day
+For one day, the two of you are the focus of attention. The concerns of the world slip away as your...
+
+BY SUSAN PARKER
+
+
+#2
+Jul 15, 2017  3 comments
+
+How to Make Great Wedding Photos
+Today I’m going to answer the question that my clients ask almost after every photo shoot. It’s a question...
+
+BY SUSAN PARKER
+
+
+#3
+Jul 5, 2017  3 comments
+
+5 Most Exotic Weddings
+Do you want to know where your wedding will be the most unforgettable? Read this post and you’ll find...
+
+BY SUSAN PARKER
+
+
+[Booking]
+----------------------------------------
+Book Your Photo Shoot
+	I will appreciate as many details about your particular wedding venue, dates, theme and other aspects, as you’d be willing to share. I will be giving you my feedback immediately!
+
+Form
+	Event Date
+	Your Name
+	E-mail
+	Your Message
+	MAKE AN APPOINTMENT
+
+
+[Footer]
+------------------------------------------
+your e-mail
+subscribe

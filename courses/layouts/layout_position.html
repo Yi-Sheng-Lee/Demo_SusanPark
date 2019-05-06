@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Layout Position</title>
+	<link rel="stylesheet" type="text/css" href="css/reset.css">
+	<style type="text/css">
+		body>div{width:85%;margin:0 auto;}
+		header,main,footer{padding:2%;}
+		header{background-color:pink;}
+		header>div{background-color:red;width:49%;height:100px;}
+		
+
+/*	Type 1	
+		header>div{position:relative;}
+		header>:nth-child(1){left:10%;}
+		header>:nth-child(2){right:10%;}
+*/
+		body>div{background-color:violet;padding:2%;}
+		header{height:300px;position:relative;}
+		header>div{position:absolute;}
+		header>:nth-child(1){top:0;left:0;}
+		header>:nth-child(2){right:0;bottom:0;}
+
+		
+
+
+		main{background-color:lightblue;height:800px;
+			display:flex;
+			justify-content:
+			space-between;
+			flex-direction:row; 
+			
+			align-content:space-around;
+			align-items:flex-start;
+		}
+		main>div{background-color:blue;width:15%;color:white;}
+		main>:nth-child(1){order:4;background-color:yellow;flex-basis:300px;}		
+		main>:nth-child(2){order:2;}
+		main>:nth-child(3){order:1;flex-grow:1;}		
+		main>:nth-child(4){order:3;flex-basis:400px;}		
+
+
+
+		footer{background-color:lightgreen;}
+		footer>div{background-color:green;width:32%;height:150px;}
+
+
+
+
+	</style>
+</head>
+<body>
+	<div>
+		<header>
+			<div><h2>Block 1</h2></div>
+			<div><h2>Block 2</h2></div>
+		</header>
+		<main>
+			<div><h2>Block 3<br>Block 3<br>Block 3<br>Block 3</h2></div>
+			<div><h2>Block 4</h2></div>
+			<div><h2>Block 5<br>Block 5<br>Block 5</h2></div>
+			<div><h2>Block 6</h2></div>
+		</main>
+		<footer>
+			<div><h2>Block 7</h2></div>
+			<div><h2>Block 8</h2></div>
+			<div><h2>Block 9</h2></div>
+		</footer>
+	</div>
+</body>
+</html>

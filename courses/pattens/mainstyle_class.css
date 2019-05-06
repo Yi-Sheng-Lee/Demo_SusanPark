@@ -1,0 +1,110 @@
+@charset "utf-8";
+/*----- Common Style -----*/
+body{font-family:Arial, Helvetica, sans-serif}
+
+.displayNo{display:none;}
+.flexbox{display:flex;}
+.f-justify-content-around{justify-content:space-around;}
+.f-justify-content-between{justify-content:space-between;}
+.gridbox{display:grid;}
+.g-justify-content-around{justify-content:space-around;}
+.g-justify-content-between{justify-content:space-between;}
+.margin-center{margin:0}
+.order1{order:1;}
+.order2{order:2;}
+.order3{order:3;}
+.order4{order:4;}
+.order5{order:5;}
+.order6{order:6;}
+.paddingH1{padding:0 1rem;}
+.paddingH2{padding:0 2rem;}
+.paddingH3{padding:0 3rem;}
+.paddingV1{padding:1rem 0;}
+.paddingV2{padding:2rem 0;}
+.paddingV3{padding:3rem 0;}
+.positionA{position:absolute;}
+.positionR{position:relative;}
+.textUCase{text-transform:uppercase;}
+.textLCase{text-transform:lowercase;}
+.textCapital{text-transform:capitalize;}
+.width-100{width:100%;}
+.width-85{width:85%;}
+.width-80{width:80%;}
+.width-45{width:45%;}
+.width-32{width:32%;}
+.width-22{width:22%;}
+.width-20{width:20%;}
+
+
+#header>div>:nth-child(2)>nav>ul>li{font-size:1.3rem;}
+/*----- Phone Style -----*/
+body>div{padding:0 1rem;}
+
+
+
+
+/*----- Pad Style -----*/
+@media screen and (min-width:601px) and (max-width:1280px) {
+	
+}
+
+
+
+/*----- Pad and Phone Style -----*/
+@media screen and (max-width:1280px) {
+	
+}
+
+/*----- PC Style -----*/
+@media screen and (min-width:1281px){
+.margin-center{margin:0 auto;}
+
+#header>div>:nth-child(2)>section>ul>li{width:17%;}
+#header>div>:nth-child(2)>nav>ul>li{width:17%;border:1px solid green;}
+#header>div>:nth-child(2)>nav>ul>li>ul,#header>div>:nth-child(2)>nav>ul>li>div{display:none;}
+/*	body>div{padding:0;}
+	body>div>header>div{width:85%;margin:0 auto;}
+	body>div>header>div{display:flex;}
+	body>div>header>div>:nth-child(1){width:20%;}
+	body>div>header>div>:nth-child(2){display:flex;width:80%;}
+	body>div>header>div>:nth-child(2)>section{order:2;width:20%;padding:0 1rem;}
+	body>div>header>div>:nth-child(2)>section>ul{display:flex;justify-content:space-around;}
+	body>div>header>div>:nth-child(2)>section>ul>li{width:17%;}
+	body>div>header>div>:nth-child(2)>nav{order:1;width:80%;}
+	body>div>header>div>:nth-child(2)>nav>ul{display:flex;justify-content:space-around;padding:0 1rem;}
+
+	body>div>main>:nth-child(2){}
+	body>div>main>:nth-child(2)>div{width:85%;margin:0 auto;display:flex;justify-content:space-around;}
+	body>div>main>:nth-child(2)>div>section{width:46%;}
+	body>div>main>:nth-child(2)>div>section:nth-of-type(1){order:2;}
+	body>div>main>:nth-child(2)>div>section:nth-of-type(2){order:1;}
+
+	body>div>main>:nth-child(3){overflow:hidden;height:300px;position:relative;}
+	body>div>main>:nth-child(3)>div>div:nth-of-type(1){position:absolute;z-index:-1;}
+	body>div>main>:nth-child(3)>div>div:nth-of-type(2){width:85%;margin:0 auto;display:flex;justify-content:space-around;}
+	body>div>main>:nth-child(3)>div>div:nth-of-type(2)>figure{}
+*/
+/*	body>div>main>:nth-child(4)>div>section:nth-of-type(2){
+		display:grid;grid-template-columns:auto auto auto auto;grid-gap:2rem;
+		min-height:80vh;align-items:flex-start;}
+	body>div>main>:nth-child(4)>div>section:nth-of-type(2)>figure{		}
+	body>div>main>:nth-child(4)>div>section:nth-of-type(2)>figure:nth-of-type(1){grid-area:1/1/span 1/span 1;}
+	body>div>main>:nth-child(4)>div>section:nth-of-type(2)>figure:nth-of-type(2){grid-area:1/2/span 2/span 1;}
+	body>div>main>:nth-child(4)>div>section:nth-of-type(2)>figure:nth-of-type(3){grid-area:1/3/span 1/span 1;}
+	body>div>main>:nth-child(4)>div>section:nth-of-type(2)>figure:nth-of-type(4){grid-area:1/4/span 2/span 1;}
+	body>div>main>:nth-child(4)>div>section:nth-of-type(2)>figure:nth-of-type(5){grid-area:2/1/span 1/span 1;}
+	body>div>main>:nth-child(4)>div>section:nth-of-type(2)>figure:nth-of-type(6){grid-area:2/3/span 1/span 1;}
+*/
+	
+/*	body>div>main>:nth-child(4)>div>section:nth-of-type(2){
+		display:grid;
+		grid-template-areas: 'p1 p2 p3 p4' 'p5 p2 p6 p4';
+	}
+	body>div>main>:nth-child(4)>div>section:nth-of-type(2)>figure:nth-of-type(1){grid-area:p1;}
+	body>div>main>:nth-child(4)>div>section:nth-of-type(2)>figure:nth-of-type(2){grid-area:p2;}
+	body>div>main>:nth-child(4)>div>section:nth-of-type(2)>figure:nth-of-type(3){grid-area:p3;}
+	body>div>main>:nth-child(4)>div>section:nth-of-type(2)>figure:nth-of-type(4){grid-area:p4;}
+	body>div>main>:nth-child(4)>div>section:nth-of-type(2)>figure:nth-of-type(5){grid-area:p5;}
+	body>div>main>:nth-child(4)>div>section:nth-of-type(2)>figure:nth-of-type(6){grid-area:p6;}
+*/	
+}

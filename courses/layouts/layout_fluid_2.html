@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Test CSS</title>
+	<link rel="stylesheet" type="text/css" href="css/reset.css">
+	<style type="text/css">
+		body>div{width:90%;margin:0 auto;}
+		header>div:not(:last-child),main>div:not(:last-child){margin-right:2%;}
+		
+		header::after,main::after{content:" ";clear:both;display:block;}
+
+		
+		header{background-color:pink;padding:2%;}
+		header>div{background-color:red;width:49%;float:left;padding:3%;box-sizing:border-box;}
+		header>div>section{width:23.5%;height:80px;background-color:orange;float:left;}
+
+
+		main{background-color:lightblue;}
+
+		main>div{height:250px;background-color:blue;width:23.5%;float:left;}
+		
+		footer{background-color:lightgreen;}
+		footer>div{background-color:green;width:32%;height:150px;}
+
+		@media screen and (min-width:1281px){
+
+		}
+
+		@media screen and (max-width:1280px){
+
+		}
+
+		@media screen and (max-width:800px){
+
+		}
+	</style>
+</head>
+<body>
+	<div>
+		<header>
+			<div><h2>Block 1</h2></div>
+			<div>
+				<section>S1</section>
+				<section>S2</section>
+				<section>S3</section>
+				<section>S4</section>
+			</div>
+		</header>
+		<main>
+			<div><h2>Block 3</h2></div>
+			<div><h2>Block 4</h2></div>
+			<div><h2>Block 5</h2></div>
+			<div><h2>Block 6</h2></div>
+		</main>
+		<footer>
+			<div><h2>Block 7</h2></div>
+			<div><h2>Block 8</h2></div>
+			<div><h2>Block 9</h2></div>
+		</footer>
+	</div>
+</body>
+</html>
