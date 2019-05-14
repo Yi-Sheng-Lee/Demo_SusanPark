@@ -20,11 +20,84 @@ body{font-family: "Times New Roman", Times, serif;}
 #header>div>div:nth-of-type(2)>nav>ul>li>div:nth-of-type(1)>label>span::before{vertical-align: middle; font-size: 0.5rem;}
 input[data-interative], [data-icon]{display: none;}
 #header>div>div:nth-of-type(1)>h1,#header>div>div:nth-of-type(2) a{display:block;}
+#slider{padding: 3rem 0; overflow: hidden;}
+#slider .active{padding:1rem;box-shadow:0 0 4px #333; background: white; overflow: hidden;}
+#slider .active:hover>:last-child{transform:scale(1);opacity:1; background-color: rgba(26, 255, 140, 0.5);}
+#slider>div{position: relative; }
+#slider>div>section:nth-of-type(1){ z-index: 40; animation:fadeIn 0.5s 1s forwards; visibility: hidden; opacity: 0;height: 500px;}
+#slider>div>section:nth-of-type(1)>figure{position: absolute; left: 100%;}
+#slider>div>section:nth-of-type(1)>figure>:last-child{position: absolute; top: 0; left: 0; width: calc(100%); height: calc(100%);  
+														 display:flex; flex-direction: column; justify-content: center; align-items: center;color: white; opacity: 0;  transition: all 0.3s; transform:scale(1.5);}
+#slider>div>section:nth-of-type(1)>figure>:last-child>figcaption{font-size: 3rem; font-weight: bold; padding: 2rem 0; position: relative; margin-bottom: 2rem; }
+#slider>div>section:nth-of-type(1)>figure>:last-child>figcaption::before{content: " "; position: absolute; left:35%;top:0; width: 30%; height: 100%;  border-bottom:3px solid white;}
+#slider>div>section:nth-of-type(1)>figure>:last-child>p{font-size:0.9rem;color:white;padding:0 7rem;line-height:1.7rem}
+/*#slider>div>section:nth-of-type(1)>figure:nth-of-type(1){animation:r2A 0.5s forwards;}*/
 
-#slider{margin-top: 45px;}
-#slider>div{padding: 1rem 0.5rem; display: none;}
-#slider>div>section:nth-of-type(1){width: 85%; margin: 0 auto;}
+#slider>div>section:nth-of-type(2)>a{position: absolute; top: 0; width: 20%; height: 100%;}
+#slider>div>section:nth-of-type(2)>:first-child{left: 0;}
+#slider>div>section:nth-of-type(2)>:last-child{left: 80%;}
 
+.o2R{animation:o2R 0.5s forwards;}
+.r2A{animation:r2A 0.5s forwards;}
+.a2L{animation:a2L 0.5s forwards;}
+.l2O{animation:l2O 0.5s forwards;}
+
+.o2L{animation:o2L 0.5s forwards;}
+.l2A{animation:l2A 0.5s forwards;}
+.a2R{animation:a2R 0.5s forwards;}
+.r2O{animation:r2O 0.5s forwards;}
+
+
+
+
+
+/*右畫面外 -> 右畫面*/
+@keyframes o2R{
+	from{left: 100%; top: 10%; width: 50%; opacity: 0; height:auto;z-index:40;}
+	to{left: 75%; top: 10%; width: 50%; opacity: 0.5; height:auto;z-index:40;}
+}
+/*右畫面 -> 中間*/
+@keyframes r2A{
+	from{left: 70%; top: 10%; width: 50%; opacity: 0.5; height:auto;z-index:40;}
+	to{left: 20%; top: 0%; width: 60%; opacity: 1; height:auto;z-index:41;}
+}
+/*中間 -> 左畫面*/
+@keyframes a2L{
+	from{left: 20%; top: 0%; width: 60%; opacity: 1; height:auto;z-index:41;}
+	to{left: -25%; top: 10%; width: 50%; opacity: 0.5; height:auto;z-index:40;}
+}
+/*左畫面 -> 左畫面外*/
+@keyframes l2O{
+	from{left: -40%; top: 10%; width: 50%; opacity: 0.5; height:auto;z-index:40;}
+	to{left: -70%; top: 10%; width: 50%; opacity: 0; height:auto;z-index:40;}
+}
+
+
+/*左畫面外 -> 左畫面*/
+@keyframes o2L{
+	from{left: -50%; top: 10%; width: 50%; opacity: 0; height:auto;z-index:40;}
+	to{left: -30%; top: 10%; width: 50%; opacity: 0.5; height:auto;z-index:40;}
+}
+/*左畫面 -> 中間*/
+@keyframes l2A{
+	from{left: -30%; top: 10%; width: 50%; opacity: 0.5; height:auto;z-index:40;}
+	to{left: 20%;  top: 0%; width: 60%; opacity: 1; height:auto;z-index:41;}
+}
+/*中間 -> 右畫面*/
+@keyframes a2R{
+	from{left: 20%; top: 0%; width: 60%; opacity: 1; height:auto;z-index:41;}
+	to{left: 70%; top: 10%; width: 50%; opacity: 0.5; height:auto;z-index:40;}
+}
+/*右畫面 -> 右畫面外*/
+@keyframes r2O{
+	from{left: 70%; top: 10%; width: 50%; opacity: 0.5; height:auto;z-index:40;}
+	to{left: 100%; top: 10%; width: 50%; opacity: 0; height:auto;z-index:40;}
+}
+@keyframes fadeIn{
+	0%{opacity: 0 visibility: hidden;}
+	95%{opacity: 1; visibility: visible;}
+	100%{opacity: 1; visibility: visible;}
+}
 
 #aboutme>div>section:nth-of-type(1)>[data-decoration="corner"]{position: relative;}
 #aboutme>div>section:nth-of-type(1)>div:nth-of-type(1){padding: 1rem;}
@@ -175,7 +248,7 @@ margin:0 auto;}
 	#header>div>div:nth-of-type(2)>nav>ul>li>div:nth-of-type(1)>label>span{transform: rotate(0deg); transform-origin: center; transition: all 0.5s;}
 	#header>div>div:nth-of-type(2)>nav>ul>li>input[data-interative="btn"]:checked~div:nth-of-type(1)>label>span{transform: rotate(180deg);}
 
-
+	#slider{margin-top: 50px;}
 
 	#aboutme>div{width:95%; margin: 1rem auto;}
 	#aboutme>div>section{width: 100%;}
@@ -254,13 +327,13 @@ margin:0 auto;}
 	#header>div>div:nth-of-type(2)>nav>ul>li>ul>li{padding: 1rem 0; text-align: center;}
 	/*#header>div>div:nth-of-type(2)>nav>ul>li:hover>div[data-decoration=corner]{visibility: visible;opacity: 1;}*/
 	#header>div>div:nth-of-type(2)>nav>ul>li>ul li:hover>a{color:white;}
-	#header>div>div:nth-of-type(2)>nav>ul>li>div{display: flex; z-index: 5;}
+	#header>div>div:nth-of-type(2)>nav>ul>li>div{display: flex; z-index: 100;}
 	#header>div>div:nth-of-type(2)>nav>ul>li section{padding: 0 1rem;  width: 25%;}
 
 	#header>div>div:nth-of-type(2)>nav>ul>li>div a{text-align: center;}
 	#header>div>div:nth-of-type(2)>nav>ul>li[data-layout=level1_menu]{position: relative;}
 	#header>div>div:nth-of-type(2)>nav>ul>li>ul{position: absolute; top:calc(100% + 3rem); opacity: 0; transition: all 0.5s;}
-	#header>div>div:nth-of-type(2)>nav>ul>li>ul{background-color:white;width:130%; visibility: hidden; border-bottom:3px solid green;box-shadow:0 0 1px #666; z-index: 5;}
+	#header>div>div:nth-of-type(2)>nav>ul>li>ul{background-color:white;width:130%; visibility: hidden; border-bottom:3px solid green;box-shadow:0 0 1px #666; z-index: 100;}
 	#header>div>div:nth-of-type(2)>nav>ul>li:hover>ul{visibility: visible; opacity: 1; top:calc(100% + 1rem);}
 	#header>div>div:nth-of-type(2)>nav>ul>li>div[data-layout=submenu]{position: absolute; background: white; width:100%; top: 100%; 
 		left: 0; visibility: hidden; opacity: 0; top:calc(100%);transition: all 0.5s;
