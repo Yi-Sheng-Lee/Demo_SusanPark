@@ -57,12 +57,22 @@ $(document).ready(function(){
 		}
 	}
 	
+	function initialSlider(){
+		$('#slider>div>section:nth-of-type(1)').height($(this).width() * 0.6 * 0.69 + 16);
+	}
+
 	function initial(){
 		current = slider.eq(pos).addClass('active r2A');
 		nRight = slider.eq(pos+1).addClass('o2R');
 		nLeft = slider.eq(len).addClass('o2L');
+		initialSlider();
 	}
-				
+	
+	$(window).on({
+		resize: function(e){
+			initialSlider();
+		}
+	});			
 	setInterval(picRight, 3000);
 	initial();
 	
