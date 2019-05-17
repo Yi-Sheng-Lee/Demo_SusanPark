@@ -3,12 +3,13 @@ $(document).ready(function(){
 	var arrows = $('#slider>div>section:nth-of-type(2)>a');
 	var points = $('#slider>div>section:nth-of-type(3)>ul a');
 
+
 	var nRight, nLeft, current, out;
 	var speed = 2500;
 	var timer; //slide timer
 	var pos = 0; //active position
 	var len = slider.length - 1; //slides total number
-
+	var point;
 
 	arrows.on({
 		click: function(e){
@@ -19,11 +20,21 @@ $(document).ready(function(){
 			switch($(this).attr("data-direction")){
 				case 'right':
 					posRight();
+					
 					break;
 				case 'left':
 					posLeft();
+					picLeft();
 			}
 			setTimer();
+		}
+	});
+
+	points.on({
+		click: function(e){
+			e.preventDefault();
+			point = $(this).parent().index();
+			console.log(point);
 		}
 	});
 
@@ -47,14 +58,19 @@ $(document).ready(function(){
 		} 
 		current = pos;
 		nLeft = (pos - 1 < 0) ? len : pos - 1;
-		picLeft();
+		
 	}
 
 	function picRight(){
-		slider.eq(out).addClass('l2O');
-		slider.eq(nLeft).addClass('a2L');
-		slider.eq(current).addClass('active r2A');
-		slider.eq(nRight).addClass('o2R');
+		if(window.matchMedia("(max-width:600px)").matches){
+			slider.eq(nLeft).addClass('a2OL');
+			slider.eq(current).addClass('active or2A');
+		} else{
+			slider.eq(out).addClass('l2O');
+			slider.eq(nLeft).addClass('a2L');
+			slider.eq(current).addClass('active r2A');
+			slider.eq(nRight).addClass('o2R');			
+		}
 	}
 
 	function picLeft(){
@@ -65,7 +81,10 @@ $(document).ready(function(){
 	}
 	
 	function initialSlider(){
-		if(window.matchMedia("(min-width:601px) and (max-width:1280px)").matches){
+		if(window.matchMedia("(max-width:600px)").matches){
+			$('#slider>div>section:nth-of-type(1)').height($(this).width() * 1 * 0.69 + 16);
+		}
+		  else if(window.matchMedia("(min-width:601px) and (max-width:1280px)").matches){
 			$('#slider>div>section:nth-of-type(1)').height($(this).width() * 0.7 * 0.69 + 16);
 		} else{
 			$('#slider>div>section:nth-of-type(1)').height($(this).width() * 0.6 * 0.69 + 16);
@@ -76,9 +95,15 @@ $(document).ready(function(){
 		// current = slider.eq(pos).addClass('active r2A');
 		// nRight = slider.eq(pos+1).addClass('o2R');
 		// nLeft = slider.eq(len).addClass('o2L');
-		posRight();
-		initialSlider();
-		setTimer();
+		// if(window.matchMedia("(max-width:600px)").matches){
+		// 	initialSlide();
+		// 	picRight();
+		// } else {
+			initialSlider();
+			picRight();
+			
+		// }
+			setTimer();
 	}
 	
 	function setTimer(){
@@ -88,10 +113,18 @@ $(document).ready(function(){
 
 	$(window).on({
 		resize: function(e){
+			clearInterval(timer);
 			initialSlider();
+			if(window.matchMedia("(max-width:600px)").matches){
+				slider.removeClass('o2R o2L r2A l2A a2R a2L l2O r2O');
+			} else{
+				slider.removeClass('or2A a2OL');
+			}
+			picRight();
+			setTimer();
 		}
 	});			
 	
 	initial();
-	
+
 });
