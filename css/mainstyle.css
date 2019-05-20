@@ -1,8 +1,8 @@
 #slider{padding: 2rem 0; overflow: hidden;/* background: yellow;*/}
-#slider>div:nth-of-type(1)>section:nth-of-type(1)>figure.active{padding:1rem;box-shadow:0 0 4px #333; background: white; overflow: hidden;}
-#slider>div:nth-of-type(1)>section:nth-of-type(1)>figure.active:hover>:last-child{transform:scale(1);opacity:1; background-color: rgba(26, 255, 140, 0.5);}
 #slider>div{position: relative; /*background: pink;*/ overflow: hidden;}
 #slider>div:nth-of-type(1)>section:nth-of-type(1){ z-index: 40; opacity: 0; animation:fadeIn 0.5s 1s forwards;}
+#slider>div:nth-of-type(1)>section:nth-of-type(1)>figure.active{padding:1rem;box-shadow:0 0 4px #333; background: white; overflow: hidden;}
+#slider>div:nth-of-type(1)>section:nth-of-type(1)>figure.active:hover>:last-child{transform:scale(1);opacity:1; background-color: rgba(26, 255, 140, 0.5);}
 #slider>div:nth-of-type(1)>section:nth-of-type(1)>figure{position: absolute; left: 100%;}
 #slider>div:nth-of-type(1)>section:nth-of-type(1)>figure>:last-child{position: absolute; top: 0; left: 0; width: calc(100%); height: calc(100%);  
 													  display:flex; flex-direction: column; justify-content: center; align-items: center;color: white; opacity: 0;  transition: all 0.3s; transform:scale(1.5);}
@@ -165,6 +165,7 @@ margin:0 auto;}
 @media screen and (max-width:1280px) {
 	#slider{margin-top: 50px;}
 
+
 	#aboutme>div{width:95%; margin: 1rem auto;}
 	#aboutme>div>section{width: 100%;}
 
@@ -194,6 +195,7 @@ margin:0 auto;}
 	#slider>div:nth-of-type(2)>ul>li{margin: 0 0.2rem;}
 	#slider>div:nth-of-type(2)>ul>li>a{display: block; width: 3rem; height: 0.3rem; background:#ddd;}
 	#slider>div:nth-of-type(2)>ul>li.active>a{background: green;}
+	#slider>div:nth-of-type(1)>section:nth-of-type(1)>figure>:last-child{opacity: 1;transform: scale(1);}
 }
 
 /*----- Pad Style -----*/
