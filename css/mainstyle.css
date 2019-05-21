@@ -169,7 +169,7 @@ margin:0 auto;}
 	#aboutme>div{width:95%; margin: 1rem auto;}
 	#aboutme>div>section{width: 100%;}
 
-	#award>div{background:url("../images/bg-image-7-1920x1244.jpg") no-repeat center fixed; padding: 2rem 0;}
+	#award>div{background:url("../images/bg-image-7-1920x1244.jpg") no-repeat center; padding: 2rem 0;}
 	#award>div>div:nth-of-type(1){width: 80%; margin: 0 auto; display: flex; justify-content: space-between; align-items: center;}
 	#award>div>div:nth-of-type(1)>figure>div:nth-of-type(1){width: 140px; height: 140px;}
 	#award>div>div:nth-of-type(1)>figure>div:nth-of-type(2){ text-align: center; color: white;}
