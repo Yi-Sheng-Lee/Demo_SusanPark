@@ -35,11 +35,13 @@ $(document).ready(function(){
 			clearInterval(timer);
 			e.preventDefault();
 			//console.log($(this).parent().index());
+			if($(this).parent().index() != pos){
 			nLeft = pos;
 			pos = $(this).parent().index();
 			current = pos;
 			picRight();
 			setTimer();
+			}
 		}
 	});
 
